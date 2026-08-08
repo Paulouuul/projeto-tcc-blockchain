@@ -18,33 +18,31 @@ Sistema de votação descentralizada baseado em blockchain, desenvolvido como Tr
 - ✅ **30 candidatos** - suporte para até 30 candidatos simultâneos
 
 ## 🏗️ Arquitetura do Sistema
-```text
-┌─────────────────────────────────────────────────────────────┐
-│                  Frontend (HTML/CSS/JS)                     │
-│                  http://localhost:3000                      │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   MetaMask (Wallet)                         │
-│              Conecta usuário à blockchain                   │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────┐
-│              Blockchain Local (Hardhat)                     │
-│                 http://localhost:8545                       │
-│                                                             │
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │           Smart Contract: Voting.sol                │    │
-│  │  - Registrar votos                                  │    │
-│  │  - Consultar candidatos                             │    │
-│  │  - Apurar resultados                                │    │
-│  │  - Impedir voto duplicado                           │    │
-│  └─────────────────────────────────────────────────────┘    │
-└─────────────────────────────────────────────────────────────┘
-```
+```mermaid
+flowchart TD
+    subgraph Frontend["Frontend (HTML/CSS/JS)"]
+        FE["http://localhost:3000"]
+    end
 
+    subgraph Wallet["MetaMask (Wallet)"]
+        MM["Conecta usuário à blockchain"]
+    end
+
+    subgraph Blockchain["Blockchain Local (Hardhat)"]
+        BC["http://localhost:8545"]
+
+        subgraph Contract["Smart Contract: Voting.sol"]
+            C1["Registrar votos"]
+            C2["Consultar candidatos"]
+            C3["Apurar resultados"]
+            C4["Impedir voto duplicado"]
+        end
+    end
+
+    FE -->|"Conecta"| MM
+    MM -->|"Interage"| BC
+    BC --> Contract
+```
 ## 🚀 Tecnologias Utilizadas
 
 | Tecnologia | Versão | Finalidade |
