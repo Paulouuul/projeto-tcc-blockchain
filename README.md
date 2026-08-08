@@ -20,28 +20,28 @@ Sistema de votação descentralizada baseado em blockchain, desenvolvido como Tr
 ## 🏗️ Arquitetura do Sistema
 ```text
 ┌─────────────────────────────────────────────────────────────┐
-│                  Frontend (HTML/CSS/JS)                                │
-│                  http://localhost:3000                                 │
+│                  Frontend (HTML/CSS/JS)                     │
+│                  http://localhost:3000                      │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                   MetaMask (Wallet)                                    │
-│              Conecta usuário à blockchain                              │
+│                   MetaMask (Wallet)                         │
+│              Conecta usuário à blockchain                   │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│              Blockchain Local (Hardhat)                                │
-│                 http://localhost:8545                          ccc     │
-│                                                                        │
-│  ┌─────────────────────────────────────────────────────┐     │
-│  │           Smart Contract: Voting.sol                          │     │
-│  │  - Registrar votos                                            │     │
-│  │  - Consultar candidatos                                       │     │
-│  │  - Apurar resultados                                           │    │
-│  │  - Impedir voto duplicado                                     │     │
-│  └─────────────────────────────────────────────────────┘     │
+│              Blockchain Local (Hardhat)                     │
+│                 http://localhost:8545                       │
+│                                                             │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │           Smart Contract: Voting.sol                │    │
+│  │  - Registrar votos                                  │    │
+│  │  - Consultar candidatos                             │    │
+│  │  - Apurar resultados                                │    │
+│  │  - Impedir voto duplicado                           │    │
+│  └─────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────┘
 ```
 
