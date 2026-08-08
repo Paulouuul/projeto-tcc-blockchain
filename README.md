@@ -20,28 +20,28 @@ Sistema de votação descentralizada baseado em blockchain, desenvolvido como Tr
 ## 🏗️ Arquitetura do Sistema
 ```text
 ┌─────────────────────────────────────────────────────────────┐
-│                  Frontend (HTML/CSS/JS)                     │
-│                  http://localhost:3000                      │
+│                  Frontend (HTML/CSS/JS)                                │
+│                  http://localhost:3000                                 │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                   MetaMask (Wallet)                         │
-│              Conecta usuário à blockchain                   │
+│                   MetaMask (Wallet)                                    │
+│              Conecta usuário à blockchain                              │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│              Blockchain Local (Hardhat)                     │
-│                 http://localhost:8545                       │
-│                                                             │
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │           Smart Contract: Voting.sol                │    │
-│  │  - Registrar votos                                  │    │
-│  │  - Consultar candidatos                             │    │
-│  │  - Apurar resultados                                │    │
-│  │  - Impedir voto duplicado                           │    │
-│  └─────────────────────────────────────────────────────┘    │
+│              Blockchain Local (Hardhat)                                │
+│                 http://localhost:8545                          ccc     │
+│                                                                        │
+│  ┌─────────────────────────────────────────────────────┐     │
+│  │           Smart Contract: Voting.sol                          │     │
+│  │  - Registrar votos                                            │     │
+│  │  - Consultar candidatos                                       │     │
+│  │  - Apurar resultados                                           │    │
+│  │  - Impedir voto duplicado                                     │     │
+│  └─────────────────────────────────────────────────────┘     │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -49,7 +49,7 @@ Sistema de votação descentralizada baseado em blockchain, desenvolvido como Tr
 
 | Tecnologia | Versão | Finalidade |
 |:---|:---:|:---|
-| **Solidity** | ^0.8.28 | Linguagem do smart contract |
+| **Solidity** | ^0.8.28  | Linguagem do smart contract |
 | **Hardhat** | ^2.26.3 | Framework de desenvolvimento blockchain |
 | **Ethers.js** | ^6.15.0 | Interação com a blockchain |
 | **MetaMask** | - | Carteira digital e provedor Web3 |
